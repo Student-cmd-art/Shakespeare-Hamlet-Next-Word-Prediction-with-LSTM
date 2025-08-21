@@ -57,4 +57,48 @@ Possible improvements could include:
 - Adding stronger regularisation (dropout, early stopping, LR scheduling)  
 - Tracking **top-k accuracy** and **perplexity** for evaluation
 
+# RNN Input-Output Architectures  
+
+RNNs can be designed to handle different input–output structures depending on the task.  
+
+## 1. One-to-One  
+- **What it is:** A single input produces a single output  
+- **Use case:** Traditional neural networks also fall here  
+- **Real-life example:** Image classification (Input: an image -> Output: class label)  
+
+
+## 2. One-to-Many  
+- **What it is:** A single input produces a sequence of outputs  
+- **Real-life examples:**  
+  - Music generation (Input: start note -> Output: full melody)  
+  - Text generation (Input: prompt word -> Output: sentence continuation)  
+
+## 3. Many-to-One  
+- **What it is:** A sequence of inputs produces a single output  
+- **Real-life examples:**  
+  - Sentiment analysis (Input: sequence of words in a review -> Output: Positive/Negative)  
+  - Fraud detection (Input: sequence of transactions -> Output: Fraud/Not Fraud)  
+
+## 4. Many-to-Many  
+- **What it is:** A sequence of inputs produces a sequence of outputs  
+- **Two types:**  
+  - **Synchronized:** Input and output sequences are the same length  
+  - **Unsynchronized:** Input and output sequences differ in length  
+
+**Real-life examples:**  
+- **Synchronized:**  
+  - Named Entity Recognition (NER): Input = sentence -> Output = tag for each word  
+  - POS tagging: Input = words -> Output = parts of speech  
+
+- **Unsynchronized:**  
+  - Translation: Input = English sentence -> Output = French sentence  
+  - Chatbots: Input = user query -> Output = response sequence  
+
+
+## Hamlet Project Setup  
+- **Type:** Many-to-One RNN  
+- **Input:** sequence of 13 words  
+- **Output:** the next predicted word  
+
+
 Streamlit App: https://shakespeare-hamlet-next-word-prediction-with-lstm-g58rtb24dagk.streamlit.app
