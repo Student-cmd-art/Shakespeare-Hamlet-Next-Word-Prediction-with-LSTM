@@ -50,9 +50,11 @@ The model clearly overfitted the small dataset. It memorised patterns in the tra
 
 ## Recommendations  
 
-If I were to extend the project, possible improvements could include:  
+Possible improvements could include:  
 
 - Limiting vocabulary size and adding an `<OOV>` token  
-- Using longer sliding window sequences across the text  
+- Using longer sequences across the text  
 - Adding stronger regularisation (dropout, early stopping, LR scheduling)  
-- Tracking **top-k accuracy** and **perplexity** for evaluation  
+- Tracking **top-k accuracy** and **perplexity** for evaluation
+
+Streamlit App: https://shakespeare-hamlet-next-word-prediction-with-lstm-g58rtb24dagk.streamlit.app
